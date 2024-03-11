@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 :root {
@@ -10,16 +11,22 @@
     --grey: #393f4d;
     --green: #4da195;
     --green-lime: #30eb2a;
+    --baby-blue: #21bbbb;
+
     --white:  #f0eea5;
 }
 
 .container {
-  text-align: center;
-  height: 100%;
-  box-sizing: border-box;
-  display: inline-grid;
-  grid-template: 150px 175px 175px 175px 145px/ 350px 410px 410px 410px 340px;
-  grid-template-areas:
+    resize: both;
+    overflow: auto;
+    text-align: center;
+    height: 100%;   
+    box-sizing: border-box;
+    display: inline-grid;
+    background-color: var(--purple);
+
+    grid-template: 150px 175px 175px 175px 145px/ 350px 410px 410px 410px 340px;
+    grid-template-areas:
       "sidebar nav nav nav nav"
       "sidebar projects projects projects announcement"
       "sidebar projects projects projects trending"
@@ -27,80 +34,86 @@
       "sidebar projects projects projects exercises"
 }
 
-.projects {
+.containerProjects {
     text-align: center;
     height: 100%;
+    gap: 5px;
     box-sizing: border-box;
-    display: inline-grid;
-    grid-template: 50px 100px 100px 100px/ 400px 400px 400px;
+ 
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 60px repeat(2, 420px);
+    grid-auto-rows:  420px;
+    /* grid-template-columns: repeat(3, 390px); */
+    /* grid-template-rows: 60px repeat(2, 420px); */
+    /* grid-auto-rows:  420px; */
+
+    background-color: #30eb2a;
     grid-template-areas:
-        "name name name"
-        "first second third"
-        "first second third"
-        "first second third"
+    "name name name"
+    "containerProjects containerProjects containerProjects"
 }
 
 .container div {
-  padding: 15px;
-  font-size: 32px;
-  font-family: Helvetica;
-  font-weight: bold;
-  color: var(--white);
-  border-radius: 15px;
+    padding: 15px;
+    font-size: 32px;
+    font-family: Helvetica;
+    font-weight: bold;
+    color: var(--white);
 }
 
 .sidebar {
-  background-color: var(--blue);
-  grid-area: sidebar;
+    background-color: var(--blue);
+    grid-area: sidebar;
 }
 
 .nav {
-  background-color: var(--blue-purple);
-  grid-area: nav;
+    background-color: var(--blue-purple);
+    grid-area: nav;
+
 }
 
 .projects {
-  background-color: var(--purple);
-  grid-area: projects;
+    padding: 10px;  
+    background-color: var(--purple);
+    grid-area: projects;
+    overflow-y: scroll;    
+
 }
 
 .projects > div{
-    background-color: var(--purple);
-    /* grid-area: first; */
+    background-color: var(--baby-blue);
     border:1px solid var(--white);
+    border-radius: 15px;
 }
 
 .projects > .name{
     background-color: red;
     grid-area: name;
-}
-
-.projects > .first{
-    background-color: red;
-    grid-area: first;
-}
-
-.projects > .second{
-    background-color: red;
-    grid-area: second;
-}
-
-.projects > .third{
-    background-color: red;
-    grid-area: third;
+    padding: 10px;
+    
 }
 
 .announcement {
-  background-color: var(--grey);
-  grid-area: announcement;
+    background-color: var(--grey);
+    grid-area: announcement;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 15px;
 }
 
 .trending{
     background-color: var(--green);
     grid-area: trending;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 15px;
 }
 
 .exercises{
+    padding: 10px;
+    margin: 15px;
+    border-radius: 15px;
     grid-area: exercises; 
     background-color: var(--green-lime);
 }
