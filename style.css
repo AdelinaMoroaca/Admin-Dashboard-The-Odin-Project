@@ -1,8 +1,8 @@
-* {
-  margin: 0;
-  padding: 0;
+/* * {
+  margin: 0px;
+  padding: 0px;
   box-sizing: border-box;
-}
+} */
 
 :root {
     --blue: #005B94;
@@ -14,9 +14,95 @@
     --baby-blue: #21bbbb;
 
     --white:  #f0eea5;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
 }
 
-.container {
+body {
+    display: inline-grid;
+    /* height: auto; */
+    grid-template: 150px 670px / 300px 1620px ;
+    /* background-color: wheat;*/
+    margin: 0px;
+    padding: 0px; 
+}
+
+.adminDaash {
+    /* border: 1px solid; */
+    font-size: 50%;
+    text-align: center;
+}
+  
+.header {
+    grid-column-start: 2;
+    grid-column-end: 3;
+  grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.sidebar {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  grid-row-start: 1; 
+    grid-row-end: 4;
+}
+
+.container{
+    grid-column-start: 2;
+    grid-column-end: 3;
+  grid-row-start: 2;
+    grid-row-end: 4;
+}
+
+/* .adminDaash{ */
+    /* resize: both;
+    overflow: auto;
+    text-align: center;
+    height: 100%;   
+    box-sizing: border-box;
+    display: inline-grid;
+    background-color: var(--purple);
+
+    grid-template: 100px 30px / 250px 800px; */
+    /* 350px 410px 410px 410px 340px; */
+    /* grid-template-areas:
+      "sidebar header"
+      "sidebar container container"
+      "sidebar container" */
+      /* "sidebar projects projects projects trending" */
+      /* "sidebar projects projects projects exercises" */
+      /* "sidebar projects projects projects exercises" */
+/* } */
+
+.container{
+    background-color: aqua;
+}
+
+.header{
+    background-color: #005B94;
+}
+
+.sidebar{
+    background-color: #30eb2a;
+}
+
+.projects{
+    background-color: antiquewhite;
+}
+
+.announcement{
+    background-color: blue;
+}
+
+.trending{
+    background-color: violet;
+}
+
+.exercises{
+    background-color: green;
+}
+/* .container {
     resize: both;
     overflow: auto;
     text-align: center;
@@ -32,8 +118,8 @@
       "sidebar projects projects projects trending"
       "sidebar projects projects projects exercises"
       "sidebar projects projects projects exercises"
-}
-
+} */
+/* 
 .containerProjects {
     text-align: center;
     height: 100%;
@@ -43,78 +129,78 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 60px repeat(2, 420px);
-    grid-auto-rows:  420px;
+    grid-auto-rows:  420px; */
     /* grid-template-columns: repeat(3, 390px); */
     /* grid-template-rows: 60px repeat(2, 420px); */
     /* grid-auto-rows:  420px; */
 
-    background-color: #30eb2a;
+    /* background-color: #30eb2a;
     grid-template-areas:
     "name name name"
     "containerProjects containerProjects containerProjects"
-}
+} */
 
-.container div {
+/* .container div {
     padding: 15px;
     font-size: 32px;
     font-family: Helvetica;
     font-weight: bold;
     color: var(--white);
-}
+} */
 
-.sidebar {
+/* .sidebar {
     background-color: var(--blue);
     grid-area: sidebar;
-}
+} */
 
-.nav {
+/* .nav {
     background-color: var(--blue-purple);
     grid-area: nav;
 
-}
+} */
 
-.projects {
+/* .projects {
     padding: 10px;  
     background-color: var(--purple);
     grid-area: projects;
     overflow-y: scroll;    
 
-}
+} */
 
-.projects > div{
+/* .projects > div{
     background-color: var(--baby-blue);
     border:1px solid var(--white);
     border-radius: 15px;
-}
+} */
 
-.projects > .name{
+/* .projects > .name{
     background-color: red;
     grid-area: name;
     padding: 10px;
     
-}
+} */
 
-.announcement {
+/* .announcement {
     background-color: var(--grey);
     grid-area: announcement;
     border-radius: 15px;
     padding: 10px;
     margin: 15px;
-}
+} */
 
-.trending{
+/* .trending{
     background-color: var(--green);
     grid-area: trending;
     border-radius: 15px;
     padding: 10px;
     margin: 15px;
-}
+} */
 
-.exercises{
+/* .exercises{
     padding: 10px;
     margin: 15px;
     border-radius: 15px;
     grid-area: exercises; 
     background-color: var(--green-lime);
-}
+} */
 
